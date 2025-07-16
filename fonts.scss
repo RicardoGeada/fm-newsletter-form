@@ -1,0 +1,68 @@
+@use "sass:map";
+
+/*roboto-regular - latin*/ 
+@font-face {
+    font-display: swap;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+/*roboto-700 - latin*/ 
+@font-face {
+    font-display: swap;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+$text-presets: (
+    "1": (
+        size: 2.5rem, // 40px
+        size-tablet: 3.5rem, // 56px
+        weight: 700,
+        line-height: 1.0,
+        letter-spacing: 0rem, // 0px 
+        family: ("Roboto", Arial, Helvetica, sans-serif),
+    ),
+    "2": (
+        size: 1rem, // 16px
+        weight: 400,
+        line-height: 1.5,
+        letter-spacing: 0rem, // 0px 
+        family: ("Roboto", Arial, Helvetica, sans-serif),
+    ),
+    "2--bold": (
+        size: 1rem, // 16px
+        weight: 700,
+        line-height: 1.5,
+        letter-spacing: 0rem, // 0px 
+        family: ("Roboto", Arial, Helvetica, sans-serif),
+    ),
+    "3": (
+        size: 0.75rem, // 12px
+        weight: 700,
+        line-height: 1.5,
+        letter-spacing: 0rem, // 0px 
+        family: ("Roboto", Arial, Helvetica, sans-serif),
+    ),
+);
+
+
+@mixin apply-text-preset($name) {
+    $preset: map.get($text-presets, $name);
+    @if $preset {
+        font-family: map.get($preset, font-family);
+        font-size: map.get($preset, size);
+        font-weight: map.get($preset, weight);
+        line-height: map.get($preset, line-height);
+        letter-spacing: map.get($preset, letter-spacing);
+
+        /* media breakpoint tablet / 768px */    
+        @media (min-width: 48em) {
+          font-size: map.get($preset, size-tablet);
+        }
+    }
+}
