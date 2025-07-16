@@ -103,9 +103,21 @@ body {
 .signup__form {
   padding: 0 var(--spacing-200);
 }
+.signup__form .input-header {
+  display: flex;
+  justify-content: space-between;
+}
 .signup__form label {
-  display: block;
   margin-block-end: var(--spacing-100);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0rem;
+  /* media breakpoint tablet / 768px */
+}
+.signup__form .error-message {
+  display: none;
+  color: var(--color-red);
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.5;
@@ -116,7 +128,9 @@ body {
   padding: var(--spacing-200) var(--spacing-300);
   border: 1px solid var(--color-grey);
   border-radius: var(--spacing-100);
+  outline: transparent;
   width: 100%;
+  color: var(--color-blue-800);
 }
 .signup__form input::placeholder {
   font-size: 1rem;
@@ -125,8 +139,40 @@ body {
   letter-spacing: 0rem;
   /* media breakpoint tablet / 768px */
 }
+.signup__form input:focus {
+  border: 1px solid var(--color-blue-800);
+}
+.signup__form input.touched:invalid {
+  color: var(--color-red);
+  border-color: var(--color-red);
+  background-color: rgba(255, 97, 85, 0.1);
+}
+.signup__form input.touched:invalid::placeholder {
+  color: var(--color-red);
+}
 .signup__form #email {
   margin-block-end: var(--spacing-300);
+}
+
+.button {
+  cursor: pointer;
+  background-color: var(--color-blue-800);
+  color: var(--color-white);
+  padding: var(--spacing-200) var(--spacing-400);
+  border: transparent;
+  outline: transparent;
+  border-radius: var(--spacing-100);
+  width: 100%;
+  max-width: 376px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0rem;
+  /* media breakpoint tablet / 768px */
+}
+.button:hover, .button:focus {
+  background: var(--color-gradient-4);
+  box-shadow: 0 1rem 2rem 0 rgba(255, 97, 85, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

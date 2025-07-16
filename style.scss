@@ -84,25 +84,70 @@ body {
     &__form {
         padding: 0 var(--spacing-200);
 
+        .input-header {
+            display: flex;
+            justify-content: space-between;
+        }
+
         label {
-           display: block;
            margin-block-end: var(--spacing-100); 
            @include fonts.apply-text-preset("3"); 
+        }
+
+        .error-message {
+            display: none;
+            color: var(--color-red);
+            @include fonts.apply-text-preset("3");
         }
 
         input {
             padding: var(--spacing-200) var(--spacing-300);
             border: 1px solid var(--color-grey);
             border-radius: var(--spacing-100);
+            outline: transparent;
             width: 100%;
+            color: var(--color-blue-800);
 
             &::placeholder {
                 @include fonts.apply-text-preset("2");
+            }
+
+            &:focus {
+                border: 1px solid var(--color-blue-800);
+            }
+
+            &.touched:invalid {
+                color: var(--color-red);
+                border-color: var(--color-red);
+                background-color: rgba($color: #FF6155, $alpha: 0.1);
+
+                &::placeholder {
+                    color: var(--color-red);
+                }
             }
         }
 
         #email {
             margin-block-end: var(--spacing-300);
         }
+    }
+}
+
+.button {
+    cursor: pointer;
+    background-color: var(--color-blue-800);
+    color: var(--color-white);
+    padding: var(--spacing-200) var(--spacing-400);
+    border: transparent;
+    outline: transparent;
+    border-radius: var(--spacing-100);
+    width: 100%;
+    max-width: 376px;
+    @include fonts.apply-text-preset("2--bold");
+
+    &:hover,
+    &:focus {
+        background: var(--color-gradient-4);
+        box-shadow: 0 1rem 2rem 0 rgba($color: #FF6155, $alpha: 0.5);
     }
 }
