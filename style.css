@@ -16,20 +16,20 @@
 }
 :root {
   /* colors */
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
   --color-grey: #949494;
   --color-blue-800: #242742;
-  --color-blue-700: #36384D;
-  --color-red: #FF6155;
-  --color-gradient-4: linear-gradient(#FF6A3A, #FF527B);
+  --color-blue-700: #36384d;
+  --color-red: #ff6155;
+  --color-gradient-4: linear-gradient(#ff6a3a, #ff527b);
   /* spacing */
   --spacing-100: 0.5rem;
-  --spacing-200: 1.0rem;
+  --spacing-200: 1rem;
   --spacing-300: 1.5rem;
-  --spacing-400: 2.0rem;
+  --spacing-400: 2rem;
   --spacing-500: 2.5rem;
-  --spacing-600: 3.0rem;
-  --spacing-800: 4.0rem;
+  --spacing-600: 3rem;
+  --spacing-800: 4rem;
   --spacing-900: 4.5rem;
   --spacing-1300: 6.5rem;
 }
@@ -47,7 +47,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .signup {
@@ -173,6 +173,49 @@ body {
 .button:hover, .button:focus {
   background: var(--color-gradient-4);
   box-shadow: 0 1rem 2rem 0 rgba(255, 97, 85, 0.5);
+}
+
+.success-message {
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+  min-height: 100vh;
+  color: var(--color-blue-800);
+  padding: 149px var(--spacing-200) 70px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0rem;
+  /* media breakpoint tablet / 768px */
+}
+.success-message__inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+  max-height: 623px;
+  flex: 1;
+  max-width: 327px;
+}
+.success-message__image {
+  width: var(--spacing-800);
+  aspect-ratio: 1/1;
+}
+.success-message__headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0rem;
+  /* media breakpoint tablet / 768px */
+}
+@media (min-width: 48em) {
+  .success-message__headline {
+    font-size: 3.5rem;
+  }
+}
+.success-message__button {
+  margin-top: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
