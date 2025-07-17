@@ -31,7 +31,7 @@
   <body>
     <main>
     <!-- Sign-up form start -->
-    <div class="signup hidden">
+    <div class="signup">
 
       <picture>
         <source media="(min-width: 67.5em)" srcset="./assets/images/illustration-sign-up-desktop.svg">
@@ -39,7 +39,8 @@
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="" class="signup__image">
       </picture>
 
-      <div class="signup__text">
+      <div class="signup__content">
+              <div class="signup__text">
         <h1 class="signup__headline">Stay updated!</h1>
 
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -64,8 +65,9 @@
           placeholder="email@company.com"
           required
         />
-        <button type="submit" class="button">Subscribe to monthly newsletter</button>
+        <button type="submit" class="button signup__button">Subscribe to monthly newsletter</button>
       </form>
+      </div>
       
     </div>
 
@@ -73,7 +75,7 @@
 
     <!-- Success message start -->
 
-    <article class="success-message" aria-hidden="true">
+    <article class="success-message hidden" aria-hidden="true">
       <div class="success-message__inner-container">
         <img class="success-message__image" src="./assets/images/icon-success.svg" alt="Success icon" />
         <h1 class="success-message__headline">Thanks for subscribing!</h1>

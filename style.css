@@ -44,6 +44,9 @@
 body {
   min-height: 100vh;
   background-color: var(--color-blue-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
@@ -56,6 +59,7 @@ body {
   flex-direction: column;
   gap: var(--spacing-500);
   min-height: 100vh;
+  width: 100vw;
   color: var(--color-blue-800);
   font-size: 1rem;
   font-weight: 400;
@@ -71,11 +75,15 @@ body {
   flex-direction: column;
   gap: var(--spacing-300);
   padding: 0 var(--spacing-200);
+  margin-block-end: var(--spacing-500);
 }
 .signup__text li {
   list-style: none;
   position: relative;
   padding-left: 2.25rem;
+}
+.signup__text li:not(:last-child) {
+  margin-block-end: var(--spacing-100);
 }
 .signup__text li::before {
   content: "";
@@ -153,6 +161,44 @@ body {
 .signup__form #email {
   margin-block-end: var(--spacing-300);
 }
+.signup__button {
+  margin-top: auto;
+}
+@media (min-width: 48em) {
+  .signup {
+    padding: var(--spacing-500);
+    border-radius: 2.25rem;
+    max-width: 608px;
+    min-height: fit-content;
+    gap: var(--spacing-400);
+  }
+  .signup__text {
+    padding: 0;
+    margin-block-end: var(--spacing-300);
+  }
+  .signup__form {
+    padding: 0;
+  }
+  .signup__form #email {
+    margin-block-end: var(--spacing-200);
+  }
+}
+@media (min-width: 67.5em) {
+  .signup {
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: var(--spacing-400);
+    gap: var(--spacing-800);
+    max-width: 904px;
+  }
+  .signup__text {
+    gap: var(--spacing-400);
+    margin-block-end: var(--spacing-400);
+  }
+  .signup__form #email {
+    margin-block-end: var(--spacing-300);
+  }
+}
 
 .button {
   cursor: pointer;
@@ -163,7 +209,6 @@ body {
   outline: transparent;
   border-radius: var(--spacing-100);
   width: 100%;
-  max-width: 376px;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
