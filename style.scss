@@ -106,6 +106,10 @@ body {
       display: none;
       color: var(--color-red);
       @include fonts.apply-text-preset("3");
+
+      &--show {
+        display: block;
+      }
     }
 
     input {
