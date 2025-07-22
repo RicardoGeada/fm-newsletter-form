@@ -68,6 +68,10 @@ function cleanup() {
 
     for (const field of fields) {
         field.value = "";
+        field.classList.remove("touched");
+        form.querySelectorAll(".error-message").forEach(span => {
+            span.classList.remove("error-message--show");
+        })
     }
 }
 
@@ -82,6 +86,7 @@ function success(email) {
 function dismiss() {
     const successEmail = document.getElementById("successEmail");
     successEmail.innerHTML = "";
+    cleanup();
     successMessage.classList.add("hidden");
     signup.classList.remove("hidden");
 }
