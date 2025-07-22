@@ -1,4 +1,6 @@
 const form = document.getElementById("signupForm");
+const signup = document.getElementById("signup");
+const successMessage = document.getElementById("successMessage");
 
 function handleSubmit(e) {
     e.preventDefault();
@@ -15,6 +17,7 @@ function handleSubmit(e) {
         if (noErrors) {
             console.log(data);
             cleanup();
+            success(data.email);
         }
     }
     
@@ -65,6 +68,14 @@ function cleanup() {
     for (const field of fields) {
         field.value = "";
     }
+}
+
+
+function success(email) {
+    const successEmail = document.getElementById("successEmail");
+    successEmail.innerHTML = email;
+    signup.classList.add("hidden");
+    successMessage.classList.remove("hidden");
 }
 
 form.addEventListener("submit", handleSubmit);

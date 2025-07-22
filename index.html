@@ -32,7 +32,7 @@
   <body>
     <main>
     <!-- Sign-up form start -->
-    <div class="signup">
+    <div id="signup" class="signup">
 
       <picture>
         <source media="(min-width: 67.5em)" srcset="./assets/images/illustration-sign-up-desktop.svg">
@@ -76,13 +76,13 @@
 
     <!-- Success message start -->
 
-    <article class="success-message hidden" aria-hidden="true">
+    <article id="successMessage" class="success-message hidden" aria-hidden="true">
       <div class="success-message__inner-container">
         <img class="success-message__image" src="./assets/images/icon-success.svg" alt="Success icon" />
         <h1 class="success-message__headline">Thanks for subscribing!</h1>
         <p>
           A confirmation email has been sent to
-          <strong>ash@loremcompany.com</strong>. 
+          <strong id="successEmail">ash@loremcompany.com</strong>. 
           Please open it and click the
           button inside to confirm your subscription.
         </p>
