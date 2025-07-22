@@ -44,7 +44,7 @@ function checkValid(key, value) {
         const type = field.getAttribute("type");
         if(field.name === key) {
             if (type === "email") {
-                emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/;
+                emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
                 if (!emailRegex.test(value)) {
                     field.classList.add("touched");
                     document.getElementById(key + "Error").classList.add("error-message--show");
