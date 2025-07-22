@@ -1,6 +1,7 @@
 const form = document.getElementById("signupForm");
 const signup = document.getElementById("signup");
 const successMessage = document.getElementById("successMessage");
+const successButton = document.getElementById("successButton");
 
 function handleSubmit(e) {
     e.preventDefault();
@@ -78,4 +79,12 @@ function success(email) {
     successMessage.classList.remove("hidden");
 }
 
+function dismiss() {
+    const successEmail = document.getElementById("successEmail");
+    successEmail.innerHTML = "";
+    successMessage.classList.add("hidden");
+    signup.classList.remove("hidden");
+}
+
 form.addEventListener("submit", handleSubmit);
+successButton.addEventListener("click", dismiss);
