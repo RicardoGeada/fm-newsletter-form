@@ -14,6 +14,7 @@ function handleSubmit(e) {
         const noErrors = required + valid == 0;
         if (noErrors) {
             console.log(data);
+            cleanup();
         }
     }
     
@@ -55,6 +56,15 @@ function checkValid(key, value) {
     }
 
     return false;
+}
+
+
+function cleanup() {
+    const fields = form.querySelectorAll("input, select, textarea");
+
+    for (const field of fields) {
+        field.value = "";
+    }
 }
 
 form.addEventListener("submit", handleSubmit);
