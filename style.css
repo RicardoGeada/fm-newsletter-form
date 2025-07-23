@@ -137,7 +137,7 @@ body {
 }
 .signup__form input {
   padding: var(--spacing-200) var(--spacing-300);
-  border: 1px solid var(--color-grey);
+  border: 0.0625rem solid var(--color-grey);
   border-radius: var(--spacing-100);
   outline: transparent;
   width: 100%;
@@ -151,7 +151,7 @@ body {
   /* media breakpoint tablet / 768px */
 }
 .signup__form input:focus {
-  border: 1px solid var(--color-blue-800);
+  border: 0.0625rem solid var(--color-blue-800);
 }
 .signup__form input.touched:invalid {
   color: var(--color-red);
@@ -171,7 +171,7 @@ body {
   .signup {
     padding: var(--spacing-500);
     border-radius: 2.25rem;
-    max-width: 608px;
+    max-width: 38rem;
     min-height: fit-content;
     gap: var(--spacing-400);
   }
@@ -192,7 +192,7 @@ body {
     align-items: center;
     padding: var(--spacing-400);
     gap: var(--spacing-800);
-    max-width: 904px;
+    max-width: 56.5rem;
   }
   .signup__text {
     gap: var(--spacing-400);
@@ -232,7 +232,7 @@ body {
   height: 100%;
   min-height: 100vh;
   color: var(--color-blue-800);
-  padding: 149px var(--spacing-200) 70px;
+  padding: 9.3125rem var(--spacing-200) 4.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -243,9 +243,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-400);
-  max-height: 623px;
+  max-height: 38.9375rem;
   flex: 1;
-  max-width: 327px;
+  max-width: 20.4375rem;
 }
 .success-message__image {
   width: var(--spacing-800);
@@ -270,7 +270,7 @@ body {
   .success-message {
     padding: var(--spacing-800);
     border-radius: 2.25rem;
-    max-width: 504px;
+    max-width: 31.5rem;
     min-height: fit-content;
   }
   .success-message__inner-container {
