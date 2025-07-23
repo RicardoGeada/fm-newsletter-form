@@ -190,7 +190,7 @@ body {
   .signup {
     flex-direction: row-reverse;
     align-items: center;
-    padding: var(--spacing-400);
+    padding: var(--spacing-300) var(--spacing-400);
     gap: var(--spacing-800);
     max-width: 56.5rem;
   }
