@@ -68,7 +68,7 @@ body {
   /* media breakpoint tablet / 768px */
 }
 .signup__image {
-  width: 100%;
+  min-width: 100%;
 }
 .signup__text {
   display: flex;
