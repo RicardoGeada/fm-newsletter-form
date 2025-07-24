@@ -51,7 +51,7 @@ body {
   @include fonts.apply-text-preset("2");
 
   &__image {
-    min-width: 100%;
+    width: 100%;
   }
 
   &__text {
@@ -175,6 +175,10 @@ body {
     padding: var(--spacing-300) var(--spacing-400);
     gap: var(--spacing-800);
     max-width:  56.5rem; // 904px
+
+    &__image {
+      width: 25rem; // 400px
+    }
 
     &__text {
       gap: var(--spacing-400);

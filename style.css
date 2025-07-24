@@ -68,7 +68,7 @@ body {
   /* media breakpoint tablet / 768px */
 }
 .signup__image {
-  min-width: 100%;
+  width: 100%;
 }
 .signup__text {
   display: flex;
@@ -193,6 +193,9 @@ body {
     padding: var(--spacing-300) var(--spacing-400);
     gap: var(--spacing-800);
     max-width: 56.5rem;
+  }
+  .signup__image {
+    width: 25rem;
   }
   .signup__text {
     gap: var(--spacing-400);
